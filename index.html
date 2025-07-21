@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Biaya Universal Beton Cetak 3D</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 py-5 sm:py-10 px-4 flex justify-center items-start">
+    
+    <nav class="fixed top-0 left-0 w-full h-16 bg-slate-800 bg-opacity-80 backdrop-blur-sm z-50 overflow-x-auto overflow-y-hidden flex items-center justify-center px-4 shadow-lg rounded-b-lg no-print">
+        <div id="nav-links" class="flex h-full whitespace-nowrap">
+            </div>
+    </nav>
+
+    <div id="main-container" class="container max-w-7xl w-full mx-auto mt-16 sm:mt-20">
+        <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg mb-6 text-center">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-2 text-gray-800 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent flex items-center justify-center gap-2">
+                <span class="text-blue-500 text-4xl">🏗️</span>
+                <span id="t-mainTitle">3D Printed Concrete - Universal Cost Calculator</span>
+            </h1>
+            <p id="t-subtitle" class="text-gray-600 text-sm sm:text-base">
+                Calculated Estimated & Should Include a 10-15% Margin
+            </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md mb-6 no-print">
+            <h3 class="bg-gray-200 text-gray-800 p-4 -mx-6 -mt-6 mb-4 rounded-t-xl font-semibold text-lg">
+                Pilih Bahasa / Select Language
+            </h3>
+            <div class="flex flex-col">
+                <label for="language_selector" class="text-gray-700 font-medium mb-2">Language:</label>
+                <select id="language_selector" class="p-3 border border-gray-300 rounded-lg text-gray-800 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-200">
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="en">English</option>
+                    <option value="zh">中文 (Chinese)</option>
+                    <option value="de">Deutsch (German)</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="calculator-body">
+            <div id="project-parameters-container"></div>
+            <div id="rebar-container"></div>
+            <div id="steel-structure-container"></div>
+            <div id="transportation-costs-container"></div>
+            <div id="project-visualization-container"></div>
+            <div id="printing-geometry-container"></div>
+            <div id="material-composition-container"></div>
+            <div id="material-quantity-container"></div>
+            <div id="printer-selection-container"></div>
+            <div id="raw-materials-container"></div>
+            <div id="equipment-container"></div>
+            <div id="labor-container"></div>
+            <div id="cost-per-cubic-meter-container"></div>
+            <div id="cost-summary-container"></div>
+            <div id="action-buttons-container" class="flex flex-wrap justify-center gap-4 my-6 no-print"></div>
+            <div id="history-container" class="no-print"></div>
+            <div id="support-container" class="no-print"></div>
+        </div>
+    </div>
+    
+    <div id="message-box-container" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1000] hidden"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
