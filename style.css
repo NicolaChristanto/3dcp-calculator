@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* For smaller screens to avoid navbar text wrapping */
+#nav-links a {
+    flex-shrink: 0;
+}
+
+.usd-currency {
+    color: #6b7280; /* gray-500 */
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.section-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s;
+}
+
+.section-card:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transform: translateY(-2px);
+}
+
+.section-header {
+    padding: 1rem;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s;
+}
+.toggle-button:hover {
+    transform: scale(1.1);
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white !important;
+        padding: 10px !important;
+        font-size: 10pt;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .section-card {
+        box-shadow: none !important;
+        border: 1px solid #e5e7eb;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        page-break-inside: avoid;
+    }
+    #main-container {
+        margin-top: 0 !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+    }
+    h1, h2, h3, .section-header {
+        color: black !important;
+        background: none !important;
+        -webkit-print-color-adjust: exact;
+    }
+    .section-header {
+       background-color: #f3f4f6 !important; /* light gray for header */
+       color: black !important;
+       margin: -1rem -1rem 1rem -1rem;
+       padding: 0.5rem 1rem;
+    }
+    table, tr, td, th {
+        font-size: 9pt;
+    }
+    input, select {
+       display: none;
+    }
+    .print-value {
+        display: inline !important;
+        font-weight: bold;
+    }
+}
+
+.print-value {
+    display: none;
+}
